@@ -22,7 +22,7 @@ public class Main {
                 okInput = false;
                 gameCounter++;
                 System.out.println("\nGame " + gameCounter);
-                do { //input loop for player1
+                do { // player1 input loop
                     System.out.print("Player 1, enter your move. [RPS]: ");
                     playerAMove = in.nextLine();
                     for (String choice : validInput) {
@@ -31,12 +31,24 @@ public class Main {
                             break;
                         }
                     }
-                    if (!okInput) {// no valid input entered
+                    if (!okInput) { // no valid input entered
                         System.out.println("\nInvalid move. Please choose between [RPS]");
                     }
-
-
-                } while(!okInput);
+                } while(!okInput); //loop until valid choice entered
+                okInput = false;
+                do { // player2 input loop
+                    System.out.print("Player 2, enter your move. [RPS]: ");
+                    playerBMove = in.nextLine();
+                    for (String choice : validInput) {
+                        if (playerBMove.equalsIgnoreCase(choice)) {
+                            okInput = true;
+                            break;
+                        }
+                    }
+                    if (!okInput) { //no valid input entered
+                        System.out.println("\nInvalid move. Please choose between [RPS]");
+                    }
+                } while(!okInput); //loop until valid choice entered
 
                 System.out.print("\nContinue? [Y/N]: ");
                 continueYN = in.nextLine();
