@@ -85,7 +85,7 @@ public class RockPaperScissors {
                     else if (playerBMove.equalsIgnoreCase("S")) {
                         //Paper vs Scissors
                         playerBWins++;
-                        System.out.println("Paper vs Scissors, Player B wins!");
+                        System.out.println("Scissors cuts Paper, Player B wins!");
                     }
                     else { // included for 'impossible' error catching
                         System.out.println("Unexpected result, check program line 91");
